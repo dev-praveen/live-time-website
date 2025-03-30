@@ -11,8 +11,12 @@ body {
     background-position: center;
     /* text-shadow removed */
 }
-
-.local-container {
+.container {
+    display: flex;
+    flex-direction: row; /* Stack children vertically */
+    gap: 30px; /* Add space between children */
+}
+.time-container {
     background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
     backdrop-filter: blur(10px); /* Blur effect for the glass look */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
@@ -23,51 +27,11 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
     color: #d1d1d1; /* White text for contrast */
 }
-
-.dubai-container {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Blur effect for the glass look */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
-    color: #d1d1d1; /* White text for contrast */
-}
-
-.sydney-container {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Blur effect for the glass look */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
-    color: #d1d1d1; /* White text for contrast */
-}
-#local-time-display {
+#time-display {
     font-size: 3em;
     margin-bottom: 10px;
 }
 
-#local-timezone-display {
-    font-size: 1.2em;
-}
-#dubai-time-display {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-#dubai-timezone-display {
-    font-size: 1.2em;
-}
-#sydney-time-display {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-#sydney-timezone-display {
+#timezone-display {
     font-size: 1.2em;
 }

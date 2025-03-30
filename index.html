@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Live Time Display</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <div class="local-container">
-        <div id="local-time-display">--:--:--</div>
-        <div id="local-timezone-display">Loading timezone...</div>
-    </div>
-    <div class="dubai-container">
-        <div id="dubai-time-display">--:--:--</div>
-        <div id="dubai-timezone-display">Loading timezone...</div>
-    </div>
-    <div class="sydney-container">
-        <div id="sydney-time-display">--:--:--</div>
-        <div id="sydney-timezone-display">Loading timezone...</div>
+  <body>
+    <div class="container">
+      <div class="time-container">
+        <div class="time-display" id="local-time-display">--:--:--</div>
+        <div class="timezone-display" id="local-timezone-display">
+          Loading timezone...
+        </div>
+      </div>
+      <div class="time-container">
+        <div class="time-display" id="dubai-time-display">--:--:--</div>
+        <div class="timezone-display" id="dubai-timezone-display">
+          Loading timezone...
+        </div>
+      </div>
+      <div class="time-container">
+        <div class="time-display" id="sydney-time-display">--:--:--</div>
+        <div class="timezone-display" id="sydney-timezone-display">
+          Loading timezone...
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
