@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    padding-top: 50px; /* Added top padding */
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Example background */
+    background-size: cover;
+    background-position: center;
+    /* text-shadow removed */
+}
+
+.local-container {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect for the glass look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
+    color: #d1d1d1; /* White text for contrast */
+}
+
+.dubai-container {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect for the glass look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
+    color: #d1d1d1; /* White text for contrast */
+}
+
+.sydney-container {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect for the glass look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for definition */
+    color: #d1d1d1; /* White text for contrast */
+}
+#local-time-display {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#local-timezone-display {
+    font-size: 1.2em;
+}
+#dubai-time-display {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#dubai-timezone-display {
+    font-size: 1.2em;
+}
+#sydney-time-display {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#sydney-timezone-display {
+    font-size: 1.2em;
+}
