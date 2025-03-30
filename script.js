@@ -2,22 +2,34 @@ function updateTime() {
     const now = new Date();
 
     // Local time
-    const timeString = now.toLocaleTimeString();
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    document.getElementById('local-time-display').textContent = timeString;
-    document.getElementById('local-timezone-display').textContent = `Timezone: ${timeZone}`;
+    updateTimeZoneDisplay('local', now, Intl.DateTimeFormat().resolvedOptions().timeZone);
 
     // Dubai time
-    const dubaiTimeString = now.toLocaleTimeString("en-US", { timeZone: "Asia/Dubai" });
-    const dubaiTimeZone = Intl.DateTimeFormat("en-US", { timeZone: "Asia/Dubai" }).resolvedOptions().timeZone;
-    document.getElementById('dubai-time-display').textContent = dubaiTimeString;
-    document.getElementById('dubai-timezone-display').textContent = `Timezone: ${dubaiTimeZone}`;
+    const dubaiTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Dubai" }));
+    updateTimeZoneDisplay('dubai', dubaiTime, "Asia/Dubai");
 
     // Sydney time
-    const sydneyTimeString = now.toLocaleTimeString("en-US", { timeZone: "Australia/Sydney" });
-    const sydneyTimeZone = Intl.DateTimeFormat("en-US", { timeZone: "Australia/Sydney" }).resolvedOptions().timeZone;
-    document.getElementById('sydney-time-display').textContent = sydneyTimeString;
-    document.getElementById('sydney-timezone-display').textContent = `Timezone: ${sydneyTimeZone}`;
+    const sydneyTime = new Date(now.toLocaleString("en-US", { timeZone: "Australia/Sydney" }));
+    updateTimeZoneDisplay('sydney', sydneyTime, "Australia/Sydney");
+}
+
+function updateTimeZoneDisplay(zone, time, timeZone) {
+    const timeString = time.toLocaleTimeString();
+    const hour = time.getHours();
+    const symbol = getTimeSymbol(hour);
+
+    document.getElementById(`${zone}-time-display`).textContent = `${symbol} ${timeString}`;
+    document.getElementById(`${zone}-timezone-display`).textContent = `Timezone: ${timeZone}`;
+}
+
+function getTimeSymbol(hour) {
+    if (hour >= 6 && hour < 12) {
+        return "☀️"; // Morning (Orange Sun)
+    } else if (hour >= 12 && hour < 18) {
+        return "🌞"; // Noon (Bright Sun)
+    } else {
+        return "🌙"; // Night (Moon with Stars)
+    }
 }
 
 // Update time immediately on load
